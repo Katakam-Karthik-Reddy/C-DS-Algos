@@ -219,18 +219,3 @@ void updateLinkedList(node *head, int index, int value){
    }
    temp->data = value;
 }
-
-node* reverseLinkedList(node *head){
-    if(head == NULL){
-        return NULL;
-    }
-    node *temp = head;
-    node *next = NULL;
-    while(temp != NULL){
-        node *tempnext = temp->next;
-        temp->next = next;
-        next = temp;
-        temp = tempnext;
-    }
-    return next;
-}

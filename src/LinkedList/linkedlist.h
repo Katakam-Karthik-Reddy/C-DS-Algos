@@ -1,6 +1,8 @@
 
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
+#include <stdbool.h>
+
 
 #ifdef __cplusplus
 extern "C" {

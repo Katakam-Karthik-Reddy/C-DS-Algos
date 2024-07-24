@@ -2,7 +2,7 @@
 CC=clang
 Cflags=-g -Wall
 src=src/LinkedList
-objs=obj/main.o obj/linkedlist.o
+objs=obj/checkIdentical.o obj/linkedlist.o
 bin=bin/main
 
 
