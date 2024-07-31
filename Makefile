@@ -1,8 +1,8 @@
 
 CC=clang
 Cflags=-g -Wall
-src=src/LinkedList
-objs=obj/checkIdentical.o obj/linkedlist.o
+src=src/Stacks
+objs=obj/reverseStack.o obj/stack.o
 bin=bin/main
 
 

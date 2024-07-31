@@ -36,4 +36,19 @@ Things Covered in this project
     - removeDuplicates
     - checkIdentical
 => stacks
-
+    - implemention of Stack
+        - createStack
+        - push
+        - pop
+        - peek
+        - isEmpty
+        - isFull
+        - size
+        - printStack
+    - reverseStack
+    - reverseStackUsingRecursion
+    - balancedParentheses
+    - implementQueue
+    - sortStack
+    - getMinInConstantTime
+    - getMaxInConstantTime
