@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/karthik/c/C-DS-Algos/build",
+  "command": "/usr/bin/cc   -g -o CMakeFiles/C-DS-ALGOS.dir/src/Queue/main.c.o -c /home/karthik/c/C-DS-Algos/src/Queue/main.c",
+  "file": "/home/karthik/c/C-DS-Algos/src/Queue/main.c"
+},
+{
+  "directory": "/home/karthik/c/C-DS-Algos/build",
+  "command": "/usr/bin/cc   -g -o CMakeFiles/C-DS-ALGOS.dir/src/Queue/Queue.c.o -c /home/karthik/c/C-DS-Algos/src/Queue/Queue.c",
+  "file": "/home/karthik/c/C-DS-Algos/src/Queue/Queue.c"
+}
+]

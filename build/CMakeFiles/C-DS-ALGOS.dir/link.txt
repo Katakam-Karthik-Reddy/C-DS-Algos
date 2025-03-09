@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/C-DS-ALGOS.dir/src/Queue/main.c.o CMakeFiles/C-DS-ALGOS.dir/src/Queue/Queue.c.o -o C-DS-ALGOS 
