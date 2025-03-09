@@ -1,61 +1,119 @@
 #include "Queue.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
 
-
-queue *Queue(){
-    queue *queue;
-    queue->capacity = 10;
-    queue->front = 0;
-    queue->rear = 0;
-    return queue;
+/**
+ * @brief Queue function is used to create the queue
+ * @return returns pointer to queue just created
+ */
+queue* Queue(){
+    queue *qu = (queue *)malloc(sizeof(queue));
+    qu->capacity = MAX_SIZE;
+    qu->front = -1;
+    qu->rear = -1;
+    return qu;
 }
 
+/**
+ * @brief enqueue function is used to add the element to the queue
+ * @param queue queue to which element to be added
+ * @param value value to be added to the queue
+ * @return true or false returns wheather the element is added or not
+ */
 bool enqueue(queue *queue, int value){
-    printf("debug : pushing element : %d\n", value);
-    
     if((queue->front) >= queue->capacity){
         printf("queue is full");
         return false;
     }
 
     queue->front++;
-    printf("debug front : %d, rear: %d\n", queue->front, queue->rear);
 
     if(queue->rear==-1){
-        printf("hel\n");
         queue->rear = queue->rear+1;
     }
-    printf("debug front : %d, rear: %d\n", queue->front, queue->rear);
     queue->arr[queue->front] = value;
     return true;
 }
 
-// int dequeue(queue *queue);
-// int peek(queue *queue);
-// int rear(queue *queue);
-// bool isFull(queue *queue);
-// bool isEmpty(queue *queue);
-// int size(queue *queue);
+/**
+ * @brief function is used to remove the element from the queue
+ * @param queue queue from which element to be removed
+ * @return int returns element which is removed
+ */
+int dequeue(queue *queue){
+    if(queue->rear == -1 && queue->rear > queue->front){
+        printf("queue is empty");
+        return -1;
+    }
+    int rearElement = queue->arr[queue->rear];
+    queue->arr[queue->rear] = INT_MIN;
+    queue->rear++;
+    return rearElement;
+}
 
-void printStruct(queue *queue){
-    printf("elements in list : ");
+/**
+ * @brief function is used to peek the top element in the queue without removeing it
+ * @param queue queue from which element to be peeked
+ * @return int returns element at the top of the queue 
+ */
+int peek(queue *queue){
+    return queue->arr[queue->front];
+}
+
+/**
+ * @brief function is used to peek the rear element in the queue without removeing it
+ * @param queue queue from which element to be peeked
+ * @return int returns element at the rear of the queue
+ */
+int rear(queue *queue){
+    return queue->arr[queue->rear];
+}
+
+/**
+ * @brief function is used to check whether the queue is full or not
+ * @param queue queue to be checked
+ * @return true or false returns wheather the queue is full or not
+ */
+bool isFull(queue *queue){
+    if(queue->front == queue->capacity){
+        return true;
+    }
+    return false;
+}
+
+/**
+ * @brief function is used to check wheather the queue is empty or not 
+ * @param queue queue to be checked
+ * @return true or false returns wheather the queue is empty or not
+ */
+bool isEmpty(queue *queue){
+    if(queue->front == -1){
+        return true;
+    }
+    return false;
+}
+
+/**
+ * @brief function is used to get the size of the queue
+ * @param queue queue to be checked
+ * @return int returns the size of the queue
+ */
+int size(queue *queue){
+    return (queue->front-queue->rear)+1;
+}
+
+/**
+    * @brief function prints the elements in the queue as the struct format
+    * @param queue *queue : pointer to the queue
+    * @return void 
+*/
+void printQueue(queue *queue){
+    printf("elements in list : \n");
     for(int i=0; i<queue->capacity; i++){
         printf("index : %d, element : %d\n", i, queue->arr[i]);
     }
-    printf("\n");
     printf("capacity : %d\n", queue->capacity);
     printf("front pointer : %d\n", queue->front);
     printf("rear pointer : %d\n", queue->rear);
 }
-void printQueue(queue *queue){
-    printf("elements in the queue\n");
-    printf("debug printqueue front : %d, rear: %d, capacity: %d\n", queue->front, queue->rear, queue->capacity);
-
-    if(queue->front == queue->rear && queue->front!=-1){
-        printf("front : %d, element : %d\n", 1, queue->arr[queue->front]);
-    }
-    for(int i=queue->rear; i<queue->front; i++){
-        printf("front: %d, element : %d\n", i, queue->arr[i]);
-    }
-}
-
