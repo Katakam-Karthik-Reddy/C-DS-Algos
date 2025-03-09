@@ -1,3 +1,0 @@
-/home/karthik/c/C-DS-Algos/build/CMakeFiles/C-DS-ALGOS.dir
-/home/karthik/c/C-DS-Algos/build/CMakeFiles/edit_cache.dir
-/home/karthik/c/C-DS-Algos/build/CMakeFiles/rebuild_cache.dir
