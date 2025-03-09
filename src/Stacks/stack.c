@@ -3,20 +3,18 @@
 #include <stdlib.h>
 #include "stack.h"
 
-
 stack* createStack(){
     stack *st = (stack *)malloc(sizeof(stack *));
     st->index = -1;
     return st;
 }
 
-
 bool isEmpty(stack *st){
     return st->index == -1;
 }
 
 bool isFull(stack *st){
-    return (int)sizeof(st->arr) <= st->index;
+    return (int)MAX_LEN <= st->index+1;
 }
 
 bool push(stack *st, int value){
@@ -25,7 +23,7 @@ bool push(stack *st, int value){
         st->arr[st->index] = value;
         return true;
     }
-    printf("Stack is full\n");
+    printf("Stack is full, when trying to push element : %d\n", value);
     return false;
 }
 

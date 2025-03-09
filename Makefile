@@ -1,19 +1,23 @@
-
 CC=clang
 Cflags=-g -Wall
-src=src/Stacks
-objs=obj/reverseStack.o obj/stack.o
-bin=bin/main
+DEPFLAGS= -MP -MD
+src=src/Queue
+objs=obj/main.o obj/Queue.o
+build=build/a.out
+RM = rm -rf
 
+# build: $(build)
+# 	./$(build)
 
-$(bin): $(objs)
-	$(CC) $(objs) -o $@
+$(build): $(objs)
+	$(CC) $(objs) -o $@ $(Cflags) $(DEPFLAGS)
 
 obj/%.o: $(src)/%.c
 	$(CC) -c $^ -o $@
 
-run: $(bin)
-	./$(bin)
+run: $(build)
+	./$(build)
 
 clean:
-	rm -f bin/* obj/*
+	$(RM) build/*.out obj/*.o
+

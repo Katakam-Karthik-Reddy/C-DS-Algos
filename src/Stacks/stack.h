@@ -6,7 +6,7 @@
 extern "C" {
 #endif
 
-#define MAX_LEN 100
+#define MAX_LEN 10
 
 typedef struct stack{
     int index;
@@ -15,20 +15,19 @@ typedef struct stack{
 
 stack* createStack();
 
-bool isEmpty(stack *st);
-
-bool isFull(stack *st);
-
 bool push(stack *st, int value);
 
 int pop(stack *st);
 
-void printStack(stack *st);
+bool isEmpty(stack *st);
+
+bool isFull(stack *st);
 
 int size(stack *st);
 
 int peek(stack *st);
 
+void printStack(stack *st);
 
 #ifdef __cplusplus
 }

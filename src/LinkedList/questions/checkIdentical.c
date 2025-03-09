@@ -1,4 +1,4 @@
-#include "linkedlist.h"
+#include "../linkedlist.h"
 #include <stdio.h>
 #include <stdbool.h>
 

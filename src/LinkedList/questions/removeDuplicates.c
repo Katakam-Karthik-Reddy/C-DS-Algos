@@ -1,4 +1,4 @@
-#include "linkedlist.h"
+#include "../linkedlist.h"
 #include <stdio.h>
 
 node* findDuplicates(node *head){

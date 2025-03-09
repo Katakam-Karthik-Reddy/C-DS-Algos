@@ -13,8 +13,15 @@ Things Covered in this project
     - ternary operators
     - reversing a string
 * data structures and algorithms
+=> Arrays
+    - implementation of ArrayWrapper
+        - Arraylist - to create a array
+        - getAtIndex - to get the element from specific index
+        - pushToList - to push the element at the end of the array
+        - insertAtIndex - to push the element at the specific index if index is more the size
+        we make the array double.
 => Linked List
-    - implemention of linked list
+    - implementation of linked list
         - createLinkedList
         - printLinkedList
         - insertAtBeginning
@@ -36,7 +43,7 @@ Things Covered in this project
     - removeDuplicates
     - checkIdentical
 => stacks
-    - implemention of Stack
+    - implementation of Stack
         - createStack
         - push
         - pop
