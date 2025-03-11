@@ -1,6 +1,13 @@
 # C-DS-Algos
 
-Things Covered in this project
+## build instructions
+- create a "build" directory
+- cd to build directory
+- give "cmake .." command to create make files
+- give make to build the project
+- run the binary
+
+* Things Covered in this project
 
 * Basics:
     - helloworld
@@ -12,15 +19,23 @@ Things Covered in this project
     - memory_allocation
     - ternary operators
     - reversing a string
+    
 * data structures and algorithms
-=> Arrays
+
+* Arrays
     - implementation of ArrayWrapper
         - Arraylist - to create a array
         - getAtIndex - to get the element from specific index
         - pushToList - to push the element at the end of the array
         - insertAtIndex - to push the element at the specific index if index is more the size
         we make the array double.
-=> Linked List
+
+* Seaching
+    - linear search
+    - binary search
+    - two pointer searching
+
+* Linked List
     - implementation of linked list
         - createLinkedList
         - printLinkedList
@@ -42,7 +57,8 @@ Things Covered in this project
     - mergeTwoSortedLinkedList
     - removeDuplicates
     - checkIdentical
-=> stacks
+
+* stacks
     - implementation of Stack
         - createStack
         - push
@@ -59,3 +75,17 @@ Things Covered in this project
     - sortStack
     - getMinInConstantTime
     - getMaxInConstantTime
+
+* Queue
+    - implementation of queue
+        - Queue
+        - enqueue
+        - dequeue
+        - peek
+        - rear
+        - isFull
+        - isEmpty
+        - size
+        - printQueue
+    - implement stack with queues
+    - sliding window maximum (maximum of all subarray of size k)
